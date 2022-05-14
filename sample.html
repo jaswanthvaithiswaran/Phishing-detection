@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <center>
+        <button id="button" onclick="call()">call</button>
+    </center>
+    <script>
+      async function call(){
+        let formData = new FormData();
+        formData.append('url', "http://sagliklisuaritmacihazi.com/wp-includes/fonts/IK/of1/m75p9vge16bi8aw40fuczryhkosdqt2xljn3i32rs09be57qjwkvco64zxtuhg1apldmn8yf4qug5efjnt1ompyshi3r9xbv0d72w6lk8acz?data=dHRyYWN5QGplZmZjb21vLm9yZw==");
+        const response = await fetch("https://phish-dect.herokuapp.com/call", {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json'
+        },
+        body:formData 
+        });
+        response.json().then(data => {
+          console.log(data);
+        });
+      }
+    </script>
+</body>
+</html>
